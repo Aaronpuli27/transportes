@@ -20,4 +20,6 @@ public class GestorBD {
         expr.close();
         conn.close();
     }
+
+
 }
