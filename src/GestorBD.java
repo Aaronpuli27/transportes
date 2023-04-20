@@ -16,22 +16,22 @@ public class GestorBD {
         xqs.setProperty("port", "8080");
     }
 
-    public void insertPunt(){
+    public void insertPunt(){ //Eric
 
     }
-    public void deletePunt(){
+    public void deletePunt(){ //Aaron
 
     }
-    public void replacePunt(){
+    public void replacePunt(){ //Eric
 
     }
-    public void getAllPuntsNames(){
+    public void getAllPuntsNames(){ //Aaron
 
     }
-    public void getLatitudAndLongitud(){
+    public void getLatitudAndLongitud(){ //Eric
 
     }
-    public void replaceImageByName(){
+    public void replaceImageByName(){ //Aaron
 
     }
 
