@@ -1,4 +1,3 @@
-
 import net.xqj.exist.ExistXQDataSource;
 
 import javax.xml.xquery.*;
