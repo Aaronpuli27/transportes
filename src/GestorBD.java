@@ -25,7 +25,7 @@ public class GestorBD {
     public void replacePunt(){
 
     }
-    public void getPuntByName(){
+    public void getAllPuntsNames(){
 
     }
     public void getLatitudAndLongitud(){
