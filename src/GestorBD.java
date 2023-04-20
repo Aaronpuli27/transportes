@@ -51,11 +51,13 @@ public class GestorBD {
 
         xqExpression.executeCommand(insert);
     }
-
     //Aaron
-    public void deletePunt(){
-        System.out.println("deletePunt");
-
+    public void deletePunt() throws XQException {
+        System.out.println("Nombre (Tooltip) del Punt a borrar");
+        String tooltip = scanner.nextLine();
+        XQExpression expr = conn.createExpression();
+        String delete = "update delete doc('/db/transportes/TRANSPORTS_GEOXML.xml')/Guiamap_Xchange/Punt[Tooltip='"+tooltip+"']";
+        expr.executeCommand(delete);
     }
 
     //Eric
@@ -91,3 +93,5 @@ public class GestorBD {
     }
 
 }
+
+
