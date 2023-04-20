@@ -1,17 +1,16 @@
 import net.xqj.exist.ExistXQDataSource;
 
 import javax.xml.xquery.*;
+import java.util.Scanner;
 
 public class GestorBD {
 
     XQDataSource xqs;
     XQConnection conn;
-    XQExpression expr;
-
+    Scanner scanner = new Scanner(System.in);
     public GestorBD() throws XQException { //Constructor
         this.xqs = new ExistXQDataSource();
         this.conn = xqs.getConnection();
-        this.expr = conn.createExpression();
         xqs.setProperty("serverName", "localhost");
         xqs.setProperty("port", "8080");
     }
@@ -19,8 +18,12 @@ public class GestorBD {
     public void insertPunt(){ //Eric
 
     }
-    public void deletePunt(){ //Aaron
-
+    public void deletePunt() throws XQException { //Aaron
+        System.out.println("ID a borrar");
+        String tooltip = scanner.nextLine();
+        XQExpression expr = conn.createExpression();
+        String delete = "update delete doc('/db/transportes/ESTACIONS_BUS_GEOXML.xml')/Guiamap_Xchange/Punt/Tooltip='"+tooltip+"'";
+        expr.executeCommand(delete);
     }
     public void replacePunt(){ //Eric
 
@@ -36,7 +39,6 @@ public class GestorBD {
     }
 
     public void tancarSessio() throws XQException { //tancarSessió
-        expr.close();
         conn.close();
     }
 
