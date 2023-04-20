@@ -1,5 +1,9 @@
+import javax.xml.xquery.XQException;
+
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Ericaldo no toma caldo ;(");
+    public static void main(String[] args) throws XQException {
+        GestorBD gestorBD = new GestorBD();
+
+        gestorBD.tancarSessio();
     }
 }
