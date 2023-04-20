@@ -16,6 +16,25 @@ public class GestorBD {
         xqs.setProperty("port", "8080");
     }
 
+    public void insertPunt(){
+
+    }
+    public void deletePunt(){
+
+    }
+    public void replacePunt(){
+
+    }
+    public void getAllPuntsNames(){
+
+    }
+    public void getLatitudAndLongitud(){
+
+    }
+    public void replaceImageByName(){
+
+    }
+
     public void tancarSessio() throws XQException { //tancarSessió
         expr.close();
         conn.close();
